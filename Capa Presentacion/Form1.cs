@@ -23,8 +23,22 @@ namespace Capa_Presentacion
 
         private void treeViewSGDB_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            if (e.Node.Name=="NodoBasesDeDatos")
+            //if (e.Node.Name == "NodoBasesDeDatos")
+            //{
+            //    //treeViewSGDB.Nodes.Add(conexion.ConsultarInformacionDBSistema().ToString());
+            //    foreach (string elem in conexion.ConsultarInformacionDBSistema())
+            //    {
+
+            //        treeViewSGDB.SelectedNode.Nodes.Add(elem);
+            //    }
+            //}
+        }
+
+        private void treeViewSGDB_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node.Name == "NodoBasesDeDatos")
             {
+                //treeViewSGDB.Nodes.Add(conexion.ConsultarInformacionDBSistema().ToString());
                 foreach (string elem in conexion.ConsultarInformacionDBSistema())
                 {
 

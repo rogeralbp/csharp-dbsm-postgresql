@@ -58,6 +58,7 @@
             treeNode5});
             this.treeViewSGDB.Size = new System.Drawing.Size(213, 500);
             this.treeViewSGDB.TabIndex = 0;
+            this.treeViewSGDB.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSGDB_AfterSelect);
             this.treeViewSGDB.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewSGDB_NodeMouseClick);
             // 
             // Form1
