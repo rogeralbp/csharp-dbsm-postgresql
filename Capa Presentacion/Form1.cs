@@ -11,11 +11,11 @@ using Capa_Datos;
 
 namespace Capa_Presentacion
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
         ConexionBasesDatos conexion = new ConexionBasesDatos();
 
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -41,7 +41,6 @@ namespace Capa_Presentacion
                 //treeViewSGDB.Nodes.Add(conexion.ConsultarInformacionDBSistema().ToString());
                 foreach (string elem in conexion.ConsultarInformacionDBSistema())
                 {
-
                     treeViewSGDB.SelectedNode.Nodes.Add(elem);
                 }
             }

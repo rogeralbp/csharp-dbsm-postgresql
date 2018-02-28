@@ -58,5 +58,7 @@ namespace Capa_Datos
 
             return informacionDB;
         }
+
+        //SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';
     }
 }

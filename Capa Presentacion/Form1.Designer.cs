@@ -1,6 +1,6 @@
 ﻿namespace Capa_Presentacion
 {
-    partial class Form1
+    partial class Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -61,13 +61,13 @@
             this.treeViewSGDB.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSGDB_AfterSelect);
             this.treeViewSGDB.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewSGDB_NodeMouseClick);
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 507);
             this.Controls.Add(this.treeViewSGDB);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Principal";
             this.ResumeLayout(false);
 
