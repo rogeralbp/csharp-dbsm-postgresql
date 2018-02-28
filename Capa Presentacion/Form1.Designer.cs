@@ -31,19 +31,19 @@
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Bases de Datos");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Login/Group Roles");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Nombre del Servidor", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3});
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
             treeNode4});
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
-            // treeView1
+            // treeViewSGDB
             // 
-            this.treeView1.Location = new System.Drawing.Point(2, 4);
-            this.treeView1.Name = "treeView1";
+            this.treeViewSGDB.Location = new System.Drawing.Point(2, 4);
+            this.treeViewSGDB.Name = "treeViewSGDB";
             treeNode1.Name = "NodoBasesDeDatos";
             treeNode1.Text = "Bases de Datos";
             treeNode2.Name = "NodoLogin";
@@ -51,29 +51,30 @@
             treeNode3.Name = "NodoTableSpaces";
             treeNode3.Text = "TableSpaces";
             treeNode4.Name = "NodoNombreServidor";
-            treeNode4.Text = "Nombre del Servidor";
+            treeNode4.Text = "Servidor SGDB";
             treeNode5.Name = "NodoServidor";
             treeNode5.Text = "Servidores";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode5});
-            this.treeView1.Size = new System.Drawing.Size(213, 500);
-            this.treeView1.TabIndex = 0;
+            this.treeViewSGDB.Size = new System.Drawing.Size(213, 500);
+            this.treeViewSGDB.TabIndex = 0;
+            this.treeViewSGDB.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewSGDB_NodeMouseClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 507);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.treeViewSGDB);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Principal";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeViewSGDB;
     }
 }
 
