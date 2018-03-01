@@ -19,6 +19,7 @@ namespace Capa_Datos
             int puerto = 5432;
             string usuario = "postgres";
             string claveAnthonny = "1414250816ma";
+            string claveBryan = String.Empty; 
             string claveRoger = "Saborio17";
             string baseDatos = "banco";
 
