@@ -84,10 +84,16 @@ namespace Capa_Presentacion
                     {
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes.Add(informacionTables[y].ToString());
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes.Add("Columns");
+                        treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes.Add("Indexes");
                         ArrayList informacionColumns = ConexionBasesDatos.ConsultarInformacionColumns(informacionDB[i].ToString(), informacionSchemas[j].ToString(), informacionTables[y].ToString());
                         for (int x = 0; x < informacionColumns.Count; x++)
                         {
                             treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes[0].Nodes.Add(informacionColumns[x].ToString());
+                        }
+                        ArrayList informacionIndex = ConexionBasesDatos.ConsultarInformacionIndex(informacionDB[i].ToString(), informacionSchemas[j].ToString(), informacionTables[y].ToString());
+                        for (int x = 0; x < informacionIndex.Count; x++)
+                        {
+                            treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes[1].Nodes.Add(informacionIndex[x].ToString());
                         }
                     }
 

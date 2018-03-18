@@ -252,5 +252,24 @@ namespace Capa_Datos
             conexion.Close();
             return informacionColumns;
         }
+
+        //Index
+        public static ArrayList ConsultarInformacionIndex(string daba, string schema, string table)
+        {
+            ArrayList informacionIndex = new ArrayList();
+            Conexion_Tablas(daba);
+            conexion.Open();
+            NpgsqlCommand consulta = new NpgsqlCommand("SELECT indexname FROM pg_indexes WHERE schemaname = '" + schema + "' AND tablename = '" + table + "'", conexion);
+            NpgsqlDataReader lectorConsulta = consulta.ExecuteReader();
+            if (lectorConsulta.HasRows)
+            {
+                while (lectorConsulta.Read())
+                {
+                    informacionIndex.Add(lectorConsulta.GetString(0));
+                }
+            }
+            conexion.Close();
+            return informacionIndex;
+        }
     }
 }
