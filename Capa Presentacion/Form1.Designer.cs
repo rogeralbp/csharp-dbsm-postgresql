@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Bases de Datos");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Login/Group Roles");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Bases de Datos");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Login/Group Roles");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TableSpaces");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.labelNombreDB = new System.Windows.Forms.Label();
             this.tabControlConsultas = new System.Windows.Forms.TabControl();
@@ -51,22 +51,20 @@
             // 
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 4);
             this.treeViewSGDB.Name = "treeViewSGDB";
-            treeNode6.Name = "NodoBasesDeDatos";
-            treeNode6.Text = "Bases de Datos";
-            treeNode7.Name = "NodoLogin";
-            treeNode7.Text = "Login/Group Roles";
-            treeNode8.Name = "NodoTableSpaces";
-            treeNode8.Text = "TableSpaces";
-            treeNode9.Name = "NodoNombreServidor";
-            treeNode9.Text = "Servidor SGDB";
-            treeNode10.Name = "NodoServidor";
-            treeNode10.Text = "Servidores";
+            treeNode1.Name = "NodoBasesDeDatos";
+            treeNode1.Text = "Bases de Datos";
+            treeNode2.Name = "NodoLogin";
+            treeNode2.Text = "Login/Group Roles";
+            treeNode3.Name = "NodoTableSpaces";
+            treeNode3.Text = "TableSpaces";
+            treeNode4.Name = "NodoNombreServidor";
+            treeNode4.Text = "Servidor SGDB";
+            treeNode5.Name = "NodoServidor";
+            treeNode5.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10});
-            this.treeViewSGDB.Size = new System.Drawing.Size(213, 501);
+            treeNode5});
+            this.treeViewSGDB.Size = new System.Drawing.Size(213, 512);
             this.treeViewSGDB.TabIndex = 0;
-            this.treeViewSGDB.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSGDB_AfterSelect);
-            this.treeViewSGDB.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewSGDB_NodeMouseClick);
             // 
             // labelNombreDB
             // 
@@ -80,10 +78,10 @@
             // tabControlConsultas
             // 
             this.tabControlConsultas.Controls.Add(this.tabPage1);
-            this.tabControlConsultas.Location = new System.Drawing.Point(212, 25);
+            this.tabControlConsultas.Location = new System.Drawing.Point(216, 25);
             this.tabControlConsultas.Name = "tabControlConsultas";
             this.tabControlConsultas.SelectedIndex = 0;
-            this.tabControlConsultas.Size = new System.Drawing.Size(768, 339);
+            this.tabControlConsultas.Size = new System.Drawing.Size(764, 339);
             this.tabControlConsultas.TabIndex = 2;
             // 
             // tabPage1
@@ -91,7 +89,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(760, 313);
+            this.tabPage1.Size = new System.Drawing.Size(756, 313);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -126,6 +124,7 @@
             this.Controls.Add(this.treeViewSGDB);
             this.Name = "Principal";
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.tabControlConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).EndInit();
             this.ResumeLayout(false);
