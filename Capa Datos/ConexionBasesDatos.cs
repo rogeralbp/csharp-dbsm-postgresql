@@ -23,7 +23,7 @@ namespace Capa_Datos
             string claveRoger = "Saborio17";
             string baseDatos = "postgres";
 
-            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveBryan + ";" + "Database=" + baseDatos;
+            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveRoger + ";" + "Database=" + baseDatos;
             conexion = new NpgsqlConnection(cadenaConexion);
 
             if (conexion != null)
@@ -47,7 +47,7 @@ namespace Capa_Datos
             string claveBryan = "bryan2748245";
             string claveRoger = "Saborio17";
             //string baseDatos = "gesion_vuelos";
-            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveBryan + ";" + "Database=" + db;
+            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveRoger + ";" + "Database=" + db;
             conexion = new NpgsqlConnection(cadenaConexion);
             if (conexion != null)
             {

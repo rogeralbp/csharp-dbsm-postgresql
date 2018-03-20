@@ -111,6 +111,7 @@
             this.dtgResultadoConsulta.ReadOnly = true;
             this.dtgResultadoConsulta.Size = new System.Drawing.Size(760, 150);
             this.dtgResultadoConsulta.TabIndex = 4;
+            this.dtgResultadoConsulta.Visible = false;
             // 
             // Principal
             // 
