@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Bases de Datos");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Login/Group Roles");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TableSpaces");
@@ -38,17 +39,22 @@
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
             treeNode4});
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
+            this.contextMenuStripDB = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.crearDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelNombreDB = new System.Windows.Forms.Label();
             this.tabControlConsultas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dtgResultadoConsulta = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripDB.SuspendLayout();
             this.tabControlConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // treeViewSGDB
             // 
+            this.treeViewSGDB.ContextMenuStrip = this.contextMenuStripDB;
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 4);
             this.treeViewSGDB.Name = "treeViewSGDB";
             treeNode1.Name = "NodoBasesDeDatos";
@@ -65,6 +71,28 @@
             treeNode5});
             this.treeViewSGDB.Size = new System.Drawing.Size(213, 512);
             this.treeViewSGDB.TabIndex = 0;
+            this.treeViewSGDB.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSGDB_AfterSelect);
+            // 
+            // contextMenuStripDB
+            // 
+            this.contextMenuStripDB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearDbToolStripMenuItem,
+            this.eliminarDbToolStripMenuItem});
+            this.contextMenuStripDB.Name = "contextMenuStripDB";
+            this.contextMenuStripDB.Size = new System.Drawing.Size(135, 48);
+            this.contextMenuStripDB.Text = "Opciones DB";
+            // 
+            // crearDbToolStripMenuItem
+            // 
+            this.crearDbToolStripMenuItem.Name = "crearDbToolStripMenuItem";
+            this.crearDbToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.crearDbToolStripMenuItem.Text = "crear db";
+            // 
+            // eliminarDbToolStripMenuItem
+            // 
+            this.eliminarDbToolStripMenuItem.Name = "eliminarDbToolStripMenuItem";
+            this.eliminarDbToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.eliminarDbToolStripMenuItem.Text = "eliminar db";
             // 
             // labelNombreDB
             // 
@@ -101,6 +129,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Consulta";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtgResultadoConsulta
@@ -126,6 +155,7 @@
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.contextMenuStripDB.ResumeLayout(false);
             this.tabControlConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).EndInit();
             this.ResumeLayout(false);
@@ -141,6 +171,9 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dtgResultadoConsulta;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripDB;
+        private System.Windows.Forms.ToolStripMenuItem crearDbToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarDbToolStripMenuItem;
     }
 }
 

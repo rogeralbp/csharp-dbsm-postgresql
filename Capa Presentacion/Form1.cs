@@ -113,5 +113,10 @@ namespace Capa_Presentacion
                 }
             }
         }
+
+        private void treeViewSGDB_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }
