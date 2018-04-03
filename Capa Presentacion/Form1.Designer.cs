@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Bases de Datos");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Login/Group Roles");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Bases de Datos");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Login/Group Roles");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TableSpaces");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.contextMenuStripDBroger = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.crearDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,52 +50,52 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basesDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creacionUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizacionUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBasesDatosEliminar = new System.Windows.Forms.ToolStripComboBox();
             this.columnasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actuliazarEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informacionEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informacionFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.secuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearSecuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarSecuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarSecuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.crearTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.columnasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.restriccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.indecesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disparadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearColumnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarColumnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarColumnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detallesColumnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.creacionUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizacionUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actuliazarEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacionEsquemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacionFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearSecuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarSecuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarSecuenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restriccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearRestriccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarRestriccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarRestriccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionRestriccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indecesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearIndexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarIndexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarIndexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disparadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearDisparadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarDisparadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarDisparadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionDisparadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearVistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarVistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarVistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,18 +111,18 @@
             this.treeViewSGDB.ContextMenuStrip = this.contextMenuStripDBroger;
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 27);
             this.treeViewSGDB.Name = "treeViewSGDB";
-            treeNode6.Name = "NodoBasesDeDatos";
-            treeNode6.Text = "Bases de Datos";
-            treeNode7.Name = "NodoLogin";
-            treeNode7.Text = "Login/Group Roles";
-            treeNode8.Name = "NodoTableSpaces";
-            treeNode8.Text = "TableSpaces";
-            treeNode9.Name = "NodoNombreServidor";
-            treeNode9.Text = "Servidor SGDB";
-            treeNode10.Name = "NodoServidor";
-            treeNode10.Text = "Servidores";
+            treeNode1.Name = "NodoBasesDeDatos";
+            treeNode1.Text = "Bases de Datos";
+            treeNode2.Name = "NodoLogin";
+            treeNode2.Text = "Login/Group Roles";
+            treeNode3.Name = "NodoTableSpaces";
+            treeNode3.Text = "TableSpaces";
+            treeNode4.Name = "NodoNombreServidor";
+            treeNode4.Text = "Servidor SGDB";
+            treeNode5.Name = "NodoServidor";
+            treeNode5.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10});
+            treeNode5});
             this.treeViewSGDB.Size = new System.Drawing.Size(213, 514);
             this.treeViewSGDB.TabIndex = 0;
             // 
@@ -236,6 +236,24 @@
             this.basesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.basesDeDatosToolStripMenuItem.Text = "Roles y Usuarios";
             // 
+            // creacionUsuarioToolStripMenuItem
+            // 
+            this.creacionUsuarioToolStripMenuItem.Name = "creacionUsuarioToolStripMenuItem";
+            this.creacionUsuarioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.creacionUsuarioToolStripMenuItem.Text = "Creacion Usuario";
+            // 
+            // actualizacionUsuarioToolStripMenuItem
+            // 
+            this.actualizacionUsuarioToolStripMenuItem.Name = "actualizacionUsuarioToolStripMenuItem";
+            this.actualizacionUsuarioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.actualizacionUsuarioToolStripMenuItem.Text = "Actualizacion Usuario";
+            // 
+            // eliminarUsuarioToolStripMenuItem
+            // 
+            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario ";
+            // 
             // tablasToolStripMenuItem
             // 
             this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -278,6 +296,30 @@
             this.columnasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.columnasToolStripMenuItem.Text = "Esquemas";
             // 
+            // crearEsquemaToolStripMenuItem
+            // 
+            this.crearEsquemaToolStripMenuItem.Name = "crearEsquemaToolStripMenuItem";
+            this.crearEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.crearEsquemaToolStripMenuItem.Text = "Crear Esquema";
+            // 
+            // eliminarEsquemaToolStripMenuItem
+            // 
+            this.eliminarEsquemaToolStripMenuItem.Name = "eliminarEsquemaToolStripMenuItem";
+            this.eliminarEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.eliminarEsquemaToolStripMenuItem.Text = "Eliminar Esquema";
+            // 
+            // actuliazarEsquemaToolStripMenuItem
+            // 
+            this.actuliazarEsquemaToolStripMenuItem.Name = "actuliazarEsquemaToolStripMenuItem";
+            this.actuliazarEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.actuliazarEsquemaToolStripMenuItem.Text = "Actualizar Esquema ";
+            // 
+            // informacionEsquemaToolStripMenuItem
+            // 
+            this.informacionEsquemaToolStripMenuItem.Name = "informacionEsquemaToolStripMenuItem";
+            this.informacionEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.informacionEsquemaToolStripMenuItem.Text = "Informacion Esquema";
+            // 
             // funcionesToolStripMenuItem
             // 
             this.funcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -289,6 +331,30 @@
             this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.funcionesToolStripMenuItem.Text = "Funciones";
             // 
+            // crearFuncionToolStripMenuItem
+            // 
+            this.crearFuncionToolStripMenuItem.Name = "crearFuncionToolStripMenuItem";
+            this.crearFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.crearFuncionToolStripMenuItem.Text = "Crear Funcion";
+            // 
+            // eliminarFuncionToolStripMenuItem
+            // 
+            this.eliminarFuncionToolStripMenuItem.Name = "eliminarFuncionToolStripMenuItem";
+            this.eliminarFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.eliminarFuncionToolStripMenuItem.Text = "Eliminar Funcion";
+            // 
+            // actualizarFuncionToolStripMenuItem
+            // 
+            this.actualizarFuncionToolStripMenuItem.Name = "actualizarFuncionToolStripMenuItem";
+            this.actualizarFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.actualizarFuncionToolStripMenuItem.Text = "Actualizar Funcion";
+            // 
+            // informacionFuncionToolStripMenuItem
+            // 
+            this.informacionFuncionToolStripMenuItem.Name = "informacionFuncionToolStripMenuItem";
+            this.informacionFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.informacionFuncionToolStripMenuItem.Text = "Informacion Funcion";
+            // 
             // secuenciasToolStripMenuItem
             // 
             this.secuenciasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -298,6 +364,24 @@
             this.secuenciasToolStripMenuItem.Name = "secuenciasToolStripMenuItem";
             this.secuenciasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.secuenciasToolStripMenuItem.Text = "Secuencias";
+            // 
+            // crearSecuenciasToolStripMenuItem
+            // 
+            this.crearSecuenciasToolStripMenuItem.Name = "crearSecuenciasToolStripMenuItem";
+            this.crearSecuenciasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.crearSecuenciasToolStripMenuItem.Text = "Crear Secuencias";
+            // 
+            // eliminarSecuenciasToolStripMenuItem
+            // 
+            this.eliminarSecuenciasToolStripMenuItem.Name = "eliminarSecuenciasToolStripMenuItem";
+            this.eliminarSecuenciasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.eliminarSecuenciasToolStripMenuItem.Text = "Eliminar Secuencias";
+            // 
+            // actualizarSecuenciasToolStripMenuItem
+            // 
+            this.actualizarSecuenciasToolStripMenuItem.Name = "actualizarSecuenciasToolStripMenuItem";
+            this.actualizarSecuenciasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.actualizarSecuenciasToolStripMenuItem.Text = "Actualizar Secuencias";
             // 
             // tablasToolStripMenuItem1
             // 
@@ -345,50 +429,6 @@
             this.columnasToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
             this.columnasToolStripMenuItem1.Text = "Columnas";
             // 
-            // restriccionesToolStripMenuItem
-            // 
-            this.restriccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearRestriccionToolStripMenuItem,
-            this.eliminarRestriccionToolStripMenuItem,
-            this.actualizarRestriccionToolStripMenuItem,
-            this.informacionRestriccionToolStripMenuItem});
-            this.restriccionesToolStripMenuItem.Name = "restriccionesToolStripMenuItem";
-            this.restriccionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.restriccionesToolStripMenuItem.Text = "Restricciones";
-            // 
-            // indecesToolStripMenuItem
-            // 
-            this.indecesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearIndexToolStripMenuItem,
-            this.actualizarIndexToolStripMenuItem,
-            this.eliminarIndexToolStripMenuItem});
-            this.indecesToolStripMenuItem.Name = "indecesToolStripMenuItem";
-            this.indecesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.indecesToolStripMenuItem.Text = "Indices";
-            this.indecesToolStripMenuItem.Click += new System.EventHandler(this.indecesToolStripMenuItem_Click);
-            // 
-            // disparadoresToolStripMenuItem
-            // 
-            this.disparadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearDisparadorToolStripMenuItem,
-            this.eliminarDisparadorToolStripMenuItem,
-            this.actualizarDisparadorToolStripMenuItem,
-            this.informacionDisparadorToolStripMenuItem});
-            this.disparadoresToolStripMenuItem.Name = "disparadoresToolStripMenuItem";
-            this.disparadoresToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.disparadoresToolStripMenuItem.Text = "Disparadores";
-            // 
-            // vistasToolStripMenuItem
-            // 
-            this.vistasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearVistaToolStripMenuItem,
-            this.eliminarVistaToolStripMenuItem,
-            this.actualizarVistaToolStripMenuItem,
-            this.informacionVistaToolStripMenuItem});
-            this.vistasToolStripMenuItem.Name = "vistasToolStripMenuItem";
-            this.vistasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.vistasToolStripMenuItem.Text = "Vistas";
-            // 
             // crearColumnaToolStripMenuItem
             // 
             this.crearColumnaToolStripMenuItem.Name = "crearColumnaToolStripMenuItem";
@@ -413,89 +453,16 @@
             this.detallesColumnaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.detallesColumnaToolStripMenuItem.Text = "Detalles Columna";
             // 
-            // creacionUsuarioToolStripMenuItem
+            // restriccionesToolStripMenuItem
             // 
-            this.creacionUsuarioToolStripMenuItem.Name = "creacionUsuarioToolStripMenuItem";
-            this.creacionUsuarioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.creacionUsuarioToolStripMenuItem.Text = "Creacion Usuario";
-            // 
-            // actualizacionUsuarioToolStripMenuItem
-            // 
-            this.actualizacionUsuarioToolStripMenuItem.Name = "actualizacionUsuarioToolStripMenuItem";
-            this.actualizacionUsuarioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.actualizacionUsuarioToolStripMenuItem.Text = "Actualizacion Usuario";
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario ";
-            // 
-            // crearEsquemaToolStripMenuItem
-            // 
-            this.crearEsquemaToolStripMenuItem.Name = "crearEsquemaToolStripMenuItem";
-            this.crearEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.crearEsquemaToolStripMenuItem.Text = "Crear Esquema";
-            // 
-            // eliminarEsquemaToolStripMenuItem
-            // 
-            this.eliminarEsquemaToolStripMenuItem.Name = "eliminarEsquemaToolStripMenuItem";
-            this.eliminarEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.eliminarEsquemaToolStripMenuItem.Text = "Eliminar Esquema";
-            // 
-            // actuliazarEsquemaToolStripMenuItem
-            // 
-            this.actuliazarEsquemaToolStripMenuItem.Name = "actuliazarEsquemaToolStripMenuItem";
-            this.actuliazarEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.actuliazarEsquemaToolStripMenuItem.Text = "Actualizar Esquema ";
-            // 
-            // informacionEsquemaToolStripMenuItem
-            // 
-            this.informacionEsquemaToolStripMenuItem.Name = "informacionEsquemaToolStripMenuItem";
-            this.informacionEsquemaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.informacionEsquemaToolStripMenuItem.Text = "Informacion Esquema";
-            // 
-            // crearFuncionToolStripMenuItem
-            // 
-            this.crearFuncionToolStripMenuItem.Name = "crearFuncionToolStripMenuItem";
-            this.crearFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.crearFuncionToolStripMenuItem.Text = "Crear Funcion";
-            // 
-            // eliminarFuncionToolStripMenuItem
-            // 
-            this.eliminarFuncionToolStripMenuItem.Name = "eliminarFuncionToolStripMenuItem";
-            this.eliminarFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.eliminarFuncionToolStripMenuItem.Text = "Eliminar Funcion";
-            // 
-            // actualizarFuncionToolStripMenuItem
-            // 
-            this.actualizarFuncionToolStripMenuItem.Name = "actualizarFuncionToolStripMenuItem";
-            this.actualizarFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.actualizarFuncionToolStripMenuItem.Text = "Actualizar Funcion";
-            // 
-            // informacionFuncionToolStripMenuItem
-            // 
-            this.informacionFuncionToolStripMenuItem.Name = "informacionFuncionToolStripMenuItem";
-            this.informacionFuncionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.informacionFuncionToolStripMenuItem.Text = "Informacion Funcion";
-            // 
-            // crearSecuenciasToolStripMenuItem
-            // 
-            this.crearSecuenciasToolStripMenuItem.Name = "crearSecuenciasToolStripMenuItem";
-            this.crearSecuenciasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.crearSecuenciasToolStripMenuItem.Text = "Crear Secuencias";
-            // 
-            // eliminarSecuenciasToolStripMenuItem
-            // 
-            this.eliminarSecuenciasToolStripMenuItem.Name = "eliminarSecuenciasToolStripMenuItem";
-            this.eliminarSecuenciasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.eliminarSecuenciasToolStripMenuItem.Text = "Eliminar Secuencias";
-            // 
-            // actualizarSecuenciasToolStripMenuItem
-            // 
-            this.actualizarSecuenciasToolStripMenuItem.Name = "actualizarSecuenciasToolStripMenuItem";
-            this.actualizarSecuenciasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.actualizarSecuenciasToolStripMenuItem.Text = "Actualizar Secuencias";
+            this.restriccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearRestriccionToolStripMenuItem,
+            this.eliminarRestriccionToolStripMenuItem,
+            this.actualizarRestriccionToolStripMenuItem,
+            this.informacionRestriccionToolStripMenuItem});
+            this.restriccionesToolStripMenuItem.Name = "restriccionesToolStripMenuItem";
+            this.restriccionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.restriccionesToolStripMenuItem.Text = "Restricciones";
             // 
             // crearRestriccionToolStripMenuItem
             // 
@@ -521,6 +488,17 @@
             this.informacionRestriccionToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.informacionRestriccionToolStripMenuItem.Text = "Informacion Restriccion";
             // 
+            // indecesToolStripMenuItem
+            // 
+            this.indecesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearIndexToolStripMenuItem,
+            this.actualizarIndexToolStripMenuItem,
+            this.eliminarIndexToolStripMenuItem});
+            this.indecesToolStripMenuItem.Name = "indecesToolStripMenuItem";
+            this.indecesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.indecesToolStripMenuItem.Text = "Indices";
+            this.indecesToolStripMenuItem.Click += new System.EventHandler(this.indecesToolStripMenuItem_Click);
+            // 
             // crearIndexToolStripMenuItem
             // 
             this.crearIndexToolStripMenuItem.Name = "crearIndexToolStripMenuItem";
@@ -538,6 +516,17 @@
             this.eliminarIndexToolStripMenuItem.Name = "eliminarIndexToolStripMenuItem";
             this.eliminarIndexToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.eliminarIndexToolStripMenuItem.Text = "Eliminar Index";
+            // 
+            // disparadoresToolStripMenuItem
+            // 
+            this.disparadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearDisparadorToolStripMenuItem,
+            this.eliminarDisparadorToolStripMenuItem,
+            this.actualizarDisparadorToolStripMenuItem,
+            this.informacionDisparadorToolStripMenuItem});
+            this.disparadoresToolStripMenuItem.Name = "disparadoresToolStripMenuItem";
+            this.disparadoresToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.disparadoresToolStripMenuItem.Text = "Disparadores";
             // 
             // crearDisparadorToolStripMenuItem
             // 
@@ -562,6 +551,17 @@
             this.informacionDisparadorToolStripMenuItem.Name = "informacionDisparadorToolStripMenuItem";
             this.informacionDisparadorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.informacionDisparadorToolStripMenuItem.Text = "Informacion Disparador";
+            // 
+            // vistasToolStripMenuItem
+            // 
+            this.vistasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearVistaToolStripMenuItem,
+            this.eliminarVistaToolStripMenuItem,
+            this.actualizarVistaToolStripMenuItem,
+            this.informacionVistaToolStripMenuItem});
+            this.vistasToolStripMenuItem.Name = "vistasToolStripMenuItem";
+            this.vistasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.vistasToolStripMenuItem.Text = "Vistas";
             // 
             // crearVistaToolStripMenuItem
             // 
