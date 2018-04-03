@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Npgsql;
 
 namespace Capa_Datos
@@ -270,6 +271,48 @@ namespace Capa_Datos
             }
             conexion.Close();
             return informacionIndex;
+        }
+
+        /// <summary>
+        /// This metod create data bases
+        /// </summary>
+        /// <param name="nombreDB">name of the future data base</param>
+        public void Crear_Base_Datos(string nombreDB)
+        {
+
+            try
+            {
+                Conexion_General();
+                conexion.Open();
+                cmd = new NpgsqlCommand("CREATE DATABASE " + nombreDB + "", conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error--- \n" + error);
+            }
+        }
+
+        /// <summary>
+        /// This metod delete data bases
+        /// </summary>
+        /// <param name="nombreDB">name of the data base that will be deleted</param>
+        public void Eliminar_Base_Datos(string nombreDB)
+        {
+
+            try
+            {
+                Conexion_General();
+                conexion.Open();
+                cmd = new NpgsqlCommand("DROP DATABASE " + nombreDB + "", conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error--- \n" + error);
+            }
         }
     }
 }

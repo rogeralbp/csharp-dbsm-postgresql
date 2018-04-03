@@ -14,7 +14,9 @@ namespace Capa_Presentacion
 {
     public partial class Principal : Form
     {
+        ConexionBasesDatos conexion = new ConexionBasesDatos();
         string dbConsulta = string.Empty;
+
         public Principal()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace Capa_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabControlConsultas.TabPages[0].Text = "Consulta "+ dbConsulta;
+            tabControlConsultas.TabPages[0].Text = "Consulta " + dbConsulta;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -34,6 +36,8 @@ namespace Capa_Presentacion
             for (int i = 0; i < informacionDB.Count; i++)
             {
                 treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Add(informacionDB[i].ToString());
+                comboBasesDatosEliminar.Items.Add(informacionDB[i]);
+                //comboBasesDtosTablasNuevas.Items.Add(informacionDB[i]);
             }
 
             //Users
@@ -113,8 +117,51 @@ namespace Capa_Presentacion
                 }
             }
         }
+        
+        private void crearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // MessageBox.Show("Debde de poder crearse las db");
+            DialogResult opcion;
+            opcion = MessageBox.Show("Desea Crear una Base de Datos ?", "Confirmacion Eliminacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (opcion == DialogResult.OK)
+            {
+                string nombreBaseDatos = Microsoft.VisualBasic.Interaction.InputBox("Introduzca el Nombre de la Base de Datos", "Nombre Base de Datos", "1", 500, 250);             
+                conexion.Crear_Base_Datos(nombreBaseDatos);
+                MessageBox.Show("Se Creo con exito la Base de Datos", "Confirmacion Creacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comboBasesDatosEliminar.Items.Clear();
+                ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
+                for (int i = 0; i < informacionDB.Count; i++)
+                {
+                    comboBasesDatosEliminar.Items.Add(informacionDB[i]);
+                }
+            }
+        }
 
-        private void treeViewSGDB_AfterSelect(object sender, TreeViewEventArgs e)
+        private void comboBasesDatosEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DialogResult opcion;
+            opcion = MessageBox.Show("Desea Eliminar la Base de Datos "+comboBasesDatosEliminar.SelectedItem.ToString()+" ?", "Confirmacion Eliminacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (opcion == DialogResult.OK)
+            {
+                string nombreBaseDatos = comboBasesDatosEliminar.SelectedItem.ToString();
+                conexion.Eliminar_Base_Datos(nombreBaseDatos);
+                MessageBox.Show("Se Elimino con exito la Base de Datos", "Confirmacion Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                comboBasesDatosEliminar.Items.Clear();
+                ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
+                for (int i = 0; i < informacionDB.Count; i++)
+                {
+                    comboBasesDatosEliminar.Items.Add(informacionDB[i]);
+                }
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void indecesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
