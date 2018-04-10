@@ -163,11 +163,11 @@
             // 
             // btnEjecutarConsulta
             // 
-            this.btnEjecutarConsulta.Location = new System.Drawing.Point(570, 1);
+            this.btnEjecutarConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnEjecutarConsulta.Image")));
+            this.btnEjecutarConsulta.Location = new System.Drawing.Point(513, 0);
             this.btnEjecutarConsulta.Name = "btnEjecutarConsulta";
-            this.btnEjecutarConsulta.Size = new System.Drawing.Size(75, 23);
+            this.btnEjecutarConsulta.Size = new System.Drawing.Size(75, 35);
             this.btnEjecutarConsulta.TabIndex = 3;
-            this.btnEjecutarConsulta.Text = "Consulta";
             this.btnEjecutarConsulta.UseVisualStyleBackColor = true;
             this.btnEjecutarConsulta.Visible = false;
             this.btnEjecutarConsulta.Click += new System.EventHandler(this.button1_Click);
