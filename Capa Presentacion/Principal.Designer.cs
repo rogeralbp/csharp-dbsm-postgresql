@@ -126,7 +126,7 @@
             treeNode5.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode5});
-            this.treeViewSGDB.Size = new System.Drawing.Size(213, 514);
+            this.treeViewSGDB.Size = new System.Drawing.Size(248, 514);
             this.treeViewSGDB.TabIndex = 0;
             // 
             // contextMenuStripDBroger
@@ -156,7 +156,7 @@
             // 
             this.labelNombreDB.AutoSize = true;
             this.labelNombreDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreDB.Location = new System.Drawing.Point(222, 491);
+            this.labelNombreDB.Location = new System.Drawing.Point(259, 491);
             this.labelNombreDB.Name = "labelNombreDB";
             this.labelNombreDB.Size = new System.Drawing.Size(0, 16);
             this.labelNombreDB.TabIndex = 1;
@@ -164,9 +164,9 @@
             // btnEjecutarConsulta
             // 
             this.btnEjecutarConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnEjecutarConsulta.Image")));
-            this.btnEjecutarConsulta.Location = new System.Drawing.Point(513, 0);
+            this.btnEjecutarConsulta.Location = new System.Drawing.Point(598, 0);
             this.btnEjecutarConsulta.Name = "btnEjecutarConsulta";
-            this.btnEjecutarConsulta.Size = new System.Drawing.Size(75, 35);
+            this.btnEjecutarConsulta.Size = new System.Drawing.Size(87, 35);
             this.btnEjecutarConsulta.TabIndex = 3;
             this.btnEjecutarConsulta.UseVisualStyleBackColor = true;
             this.btnEjecutarConsulta.Visible = false;
@@ -175,10 +175,10 @@
             // dtgResultadoConsulta
             // 
             this.dtgResultadoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgResultadoConsulta.Location = new System.Drawing.Point(216, 366);
+            this.dtgResultadoConsulta.Location = new System.Drawing.Point(252, 366);
             this.dtgResultadoConsulta.Name = "dtgResultadoConsulta";
             this.dtgResultadoConsulta.ReadOnly = true;
-            this.dtgResultadoConsulta.Size = new System.Drawing.Size(845, 175);
+            this.dtgResultadoConsulta.Size = new System.Drawing.Size(988, 175);
             this.dtgResultadoConsulta.TabIndex = 4;
             this.dtgResultadoConsulta.Visible = false;
             // 
@@ -188,7 +188,8 @@
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1073, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1252, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -208,8 +209,9 @@
             this.indecesToolStripMenuItem,
             this.disparadoresToolStripMenuItem,
             this.vistasToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("opcionesToolStripMenuItem.Image")));
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // consultaToolStripMenuItem
@@ -607,9 +609,9 @@
             // txtConsulta
             // 
             this.txtConsulta.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsulta.Location = new System.Drawing.Point(221, 30);
+            this.txtConsulta.Location = new System.Drawing.Point(252, 30);
             this.txtConsulta.Name = "txtConsulta";
-            this.txtConsulta.Size = new System.Drawing.Size(840, 330);
+            this.txtConsulta.Size = new System.Drawing.Size(988, 330);
             this.txtConsulta.TabIndex = 0;
             this.txtConsulta.Text = "";
             this.txtConsulta.Visible = false;
@@ -617,15 +619,17 @@
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 542);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1252, 542);
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.dtgResultadoConsulta);
             this.Controls.Add(this.btnEjecutarConsulta);
             this.Controls.Add(this.labelNombreDB);
             this.Controls.Add(this.treeViewSGDB);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
