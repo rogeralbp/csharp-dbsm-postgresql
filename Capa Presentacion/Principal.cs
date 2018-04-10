@@ -170,18 +170,22 @@ namespace Capa_Presentacion
             if (comboDBConsulta.SelectedItem== null)
             {
                 conexion.Consulta_Cualquiera("postgres", txtConsulta.Text);
-
             }
             else
             {
                 conexion.Consulta_Cualquiera(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text);
             }
+            treeViewSGDB.Nodes.Clear();
+            Llenar_Arbol();
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            Llenar_Arbol();
+        }
 
-            //Base de datos
+        public void Llenar_Arbol()
+        {
             ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
             for (int i = 0; i < informacionDB.Count; i++)
             {
