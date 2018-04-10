@@ -279,18 +279,30 @@ namespace Capa_Datos
         /// <param name="nombreDB">name of the future data base</param>
         public void Crear_Base_Datos(string nombreDB)
         {
-
+            Conexion_General();
             try
             {
-                Conexion_General();
                 conexion.Open();
-                cmd = new NpgsqlCommand("CREATE DATABASE " + nombreDB + "", conexion);
-                cmd.ExecuteNonQuery();
-                conexion.Close();
+                //cmd = new NpgsqlCommand("CREATE DATABASE " + nombreDB + "", conexion);
+                //cmd.ExecuteNonQuery();
+                //conexion.Close();
             }
             catch (Exception error)
             {
                 MessageBox.Show("Error--- \n" + error);
+            }
+
+            cmd = new NpgsqlCommand("CREATE DATABASE " + nombreDB + "", conexion);
+            bool realizacionConsulta = Convert.ToBoolean(cmd.ExecuteNonQuery());
+
+            if (realizacionConsulta)
+            {
+                MessageBox.Show("Consulta Ejecutada Con Exito!!");
+
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un Error en la ejecucion de la Consulta");
             }
         }
 
@@ -314,5 +326,39 @@ namespace Capa_Datos
                 MessageBox.Show("Error--- \n" + error);
             }
         }
+
+        /// <summary>
+        /// This method execute whatever kind of query
+        /// </summary>
+        /// <param name="scripts">the scripts</param>
+        public void Consulta_Cualquiera(string db,string scripts)
+        {
+            try
+            {
+                Conexion_Tablas(db);
+                try
+                {
+                    conexion.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error--- \n" + error);
+                }
+
+                cmd = new NpgsqlCommand(scripts, conexion);
+                bool realizacionConsulta = Convert.ToBoolean(cmd.ExecuteNonQuery());
+
+                if (realizacionConsulta)
+                {
+                    MessageBox.Show("Consulta Ejecutada Con Exito!!");
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un Error en la ejecucion de la Consulta");
+                }
+            }
+            catch (Exception errorQuery) { MessageBox.Show("Error se origina como _\n"+errorQuery); }
+        }
+
     }
 }

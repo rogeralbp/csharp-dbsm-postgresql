@@ -16,16 +16,50 @@ namespace Capa_Presentacion
     {
         ConexionBasesDatos conexion = new ConexionBasesDatos();
         string dbConsulta = string.Empty;
+        string[] Reservadas = new string[] { "DATABASE","TABLE","COLUMN","CREATE","DELETE", "DROP","SELECT","INSERT","UPDATE","DELETE","FROM","ON","AS" };
 
         public Principal()
         {
             InitializeComponent();
+            this.txtConsulta.TextChanged += (ob, ev) =>
+            {
+                var palabras = this.txtConsulta.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var resultado = from b in Reservadas
+                                from c in palabras
+                                where c == b
+                                select b;
+
+                int inicio = 0;
+                foreach (var item in resultado)
+                {
+                    inicio = this.txtConsulta.Text.IndexOf(item, inicio);
+                    this.txtConsulta.Select(inicio, item.Length);
+                    this.txtConsulta.SelectionColor = Color.Red;
+                    this.txtConsulta.SelectionStart = this.txtConsulta.Text.Length;
+                    inicio++;
+                }
+
+                this.txtConsulta.SelectionColor = Color.Black;
+                this.txtConsulta.SelectionStart = this.txtConsulta.Text.Length;
+
+
+            };
+
             this.CenterToScreen();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabControlConsultas.TabPages[0].Text = "Consulta " + dbConsulta;
+            //tabControlConsultas.TabPages[0].Text = "Consulta " + dbConsulta;
+            if (comboDBConsulta.SelectedItem== null)
+            {
+                conexion.Consulta_Cualquiera("postgres", txtConsulta.Text);
+
+            }
+            else
+            {
+                conexion.Consulta_Cualquiera(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text);
+            }
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -37,6 +71,7 @@ namespace Capa_Presentacion
             {
                 treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Add(informacionDB[i].ToString());
                 comboBasesDatosEliminar.Items.Add(informacionDB[i]);
+                comboDBConsulta.Items.Add(informacionDB[i]);
                 //comboBasesDtosTablasNuevas.Items.Add(informacionDB[i]);
             }
 
@@ -165,5 +200,31 @@ namespace Capa_Presentacion
         {
 
         }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //txtConsulta.Visible = true;
+        }
+
+        private void txtConsulta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            btnEjecutarConsulta.Visible = true;
+        }
+
+        private void comboDBConsulta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboDBConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtConsulta.Visible = true;
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            txtConsulta.Visible = true;
+        }
+
     }
 }
