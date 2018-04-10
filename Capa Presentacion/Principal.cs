@@ -132,7 +132,124 @@ namespace Capa_Presentacion
 "PRIMARY",
 "EXISTS",
 "PRINT",
-"PROC" };
+"PROC","add","external",
+"procedure",
+"all",
+"fetch",
+"public",
+"alter",
+"file",
+"raiserror",
+"and",
+"fillfactor",
+"read",
+"any",
+"for",
+"readtext",
+"as",
+"foreign",
+"reconfigure",
+"asc",
+"freetext",
+"references",
+"authorization",
+"freetexttable",
+"replication",
+"backup",
+"from",
+"restore",
+"begin",
+"full",
+"restrict",
+"between",
+"function",
+"return",
+"break",
+"grant",
+"revoke",
+"group",
+"right",
+"by",
+"having",
+"case",
+"if",
+"schema",
+"clustered",
+"in",
+"index",
+"select",
+"inner",
+"column",
+"insert",
+"commit",
+"intersect",
+"constraint",
+"is",
+"set",
+"contains",
+"join",
+"key",
+"left",
+"create",
+"like",
+"cross",
+"table",
+"current",
+"current_date",
+"merge",
+"current_time",
+"national"
+,"then",
+"current_timestamp",
+"to",
+"current_user",
+"nonclustered",
+"top",
+"cursor",
+"database",
+"null",
+"transaction",
+"trigger",
+"deallocate",
+"of",
+"truncate",
+"declare",
+"off"
+,"delete",
+"on",
+"union",
+"deny",
+"open",
+"unique",
+"desc",
+"update",
+"distinct",
+"use",
+"double",
+"option",
+"user",
+"drop"
+,"or",
+"values",
+"dump",
+"order",
+"varying"
+,"else"
+,"outer",
+"view",
+"end",
+"where",
+"except",
+"while",
+"exec",
+"precision",
+"with",
+"execute",
+"primary",
+"exists",
+"print",
+"proc"
+ };
 
         public Principal()
         {
@@ -170,18 +287,24 @@ namespace Capa_Presentacion
             if (comboDBConsulta.SelectedItem== null)
             {
                 conexion.Consulta_Cualquiera("postgres", txtConsulta.Text);
-
             }
             else
             {
                 conexion.Consulta_Cualquiera(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text);
             }
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Clear();
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[1].Nodes.Clear();
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[2].Nodes.Clear();
+            Llenar_Arbol();
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            Llenar_Arbol();
+        }
 
-            //Base de datos
+        public void Llenar_Arbol()
+        {
             ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
             for (int i = 0; i < informacionDB.Count; i++)
             {
