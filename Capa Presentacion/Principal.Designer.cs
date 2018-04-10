@@ -220,6 +220,7 @@
             this.toolStripSeparator1,
             this.toolStripMenuItem1,
             this.comboDBConsulta});
+            this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
@@ -251,6 +252,7 @@
             this.creacionUsuarioToolStripMenuItem,
             this.actualizacionUsuarioToolStripMenuItem,
             this.eliminarUsuarioToolStripMenuItem});
+            this.basesDeDatosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("basesDeDatosToolStripMenuItem.Image")));
             this.basesDeDatosToolStripMenuItem.Name = "basesDeDatosToolStripMenuItem";
             this.basesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.basesDeDatosToolStripMenuItem.Text = "Roles y Usuarios";
@@ -278,6 +280,7 @@
             this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem,
             this.eliminarBaseDeDatosToolStripMenuItem});
+            this.tablasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tablasToolStripMenuItem.Image")));
             this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
             this.tablasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.tablasToolStripMenuItem.Text = "Bases de Datos";
@@ -311,6 +314,7 @@
             this.eliminarEsquemaToolStripMenuItem,
             this.actuliazarEsquemaToolStripMenuItem,
             this.informacionEsquemaToolStripMenuItem});
+            this.columnasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("columnasToolStripMenuItem.Image")));
             this.columnasToolStripMenuItem.Name = "columnasToolStripMenuItem";
             this.columnasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.columnasToolStripMenuItem.Text = "Esquemas";
@@ -346,6 +350,7 @@
             this.eliminarFuncionToolStripMenuItem,
             this.actualizarFuncionToolStripMenuItem,
             this.informacionFuncionToolStripMenuItem});
+            this.funcionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("funcionesToolStripMenuItem.Image")));
             this.funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
             this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.funcionesToolStripMenuItem.Text = "Funciones";
@@ -380,6 +385,7 @@
             this.crearSecuenciasToolStripMenuItem,
             this.eliminarSecuenciasToolStripMenuItem,
             this.actualizarSecuenciasToolStripMenuItem});
+            this.secuenciasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("secuenciasToolStripMenuItem.Image")));
             this.secuenciasToolStripMenuItem.Name = "secuenciasToolStripMenuItem";
             this.secuenciasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.secuenciasToolStripMenuItem.Text = "Secuencias";
@@ -409,6 +415,7 @@
             this.eliminarTablaToolStripMenuItem,
             this.actualizarTablaToolStripMenuItem,
             this.informacionTablaToolStripMenuItem});
+            this.tablasToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("tablasToolStripMenuItem1.Image")));
             this.tablasToolStripMenuItem1.Name = "tablasToolStripMenuItem1";
             this.tablasToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
             this.tablasToolStripMenuItem1.Text = "Tablas";
@@ -444,6 +451,7 @@
             this.eliminarColumnaToolStripMenuItem,
             this.actualizarColumnaToolStripMenuItem,
             this.detallesColumnaToolStripMenuItem});
+            this.columnasToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("columnasToolStripMenuItem1.Image")));
             this.columnasToolStripMenuItem1.Name = "columnasToolStripMenuItem1";
             this.columnasToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
             this.columnasToolStripMenuItem1.Text = "Columnas";
@@ -479,6 +487,7 @@
             this.eliminarRestriccionToolStripMenuItem,
             this.actualizarRestriccionToolStripMenuItem,
             this.informacionRestriccionToolStripMenuItem});
+            this.restriccionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("restriccionesToolStripMenuItem.Image")));
             this.restriccionesToolStripMenuItem.Name = "restriccionesToolStripMenuItem";
             this.restriccionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.restriccionesToolStripMenuItem.Text = "Restricciones";
@@ -513,6 +522,7 @@
             this.crearIndexToolStripMenuItem,
             this.actualizarIndexToolStripMenuItem,
             this.eliminarIndexToolStripMenuItem});
+            this.indecesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indecesToolStripMenuItem.Image")));
             this.indecesToolStripMenuItem.Name = "indecesToolStripMenuItem";
             this.indecesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.indecesToolStripMenuItem.Text = "Indices";
@@ -543,6 +553,7 @@
             this.eliminarDisparadorToolStripMenuItem,
             this.actualizarDisparadorToolStripMenuItem,
             this.informacionDisparadorToolStripMenuItem});
+            this.disparadoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("disparadoresToolStripMenuItem.Image")));
             this.disparadoresToolStripMenuItem.Name = "disparadoresToolStripMenuItem";
             this.disparadoresToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.disparadoresToolStripMenuItem.Text = "Disparadores";
@@ -578,6 +589,7 @@
             this.eliminarVistaToolStripMenuItem,
             this.actualizarVistaToolStripMenuItem,
             this.informacionVistaToolStripMenuItem});
+            this.vistasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vistasToolStripMenuItem.Image")));
             this.vistasToolStripMenuItem.Name = "vistasToolStripMenuItem";
             this.vistasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.vistasToolStripMenuItem.Text = "Vistas";
