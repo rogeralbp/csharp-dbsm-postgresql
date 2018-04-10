@@ -24,7 +24,7 @@ namespace Capa_Datos
             string claveRoger = "Saborio17";
             string baseDatos = "postgres";
 
-            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveAnthonny + ";" + "Database=" + baseDatos;
+            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveRoger + ";" + "Database=" + baseDatos;
             conexion = new NpgsqlConnection(cadenaConexion);
 
             if (conexion != null)

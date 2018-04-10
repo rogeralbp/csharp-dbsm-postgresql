@@ -38,6 +38,7 @@
             treeNode3});
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
             treeNode4});
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.contextMenuStripDBroger = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.crearDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -625,9 +626,10 @@
             this.Controls.Add(this.labelNombreDB);
             this.Controls.Add(this.treeViewSGDB);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
-            this.Text = "Principal";
+            this.Text = "pgAdmin";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.contextMenuStripDBroger.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).EndInit();
