@@ -16,6 +16,7 @@ namespace Capa_Presentacion
     {
         ConexionBasesDatos conexion = new ConexionBasesDatos();
         string dbConsulta = string.Empty;
+        string dbNombre = string.Empty;
         string[] Reservadas = new string[] { "ADD","EXTERNAL",
 "PROCEDURE",
 "ALL",
@@ -292,9 +293,14 @@ namespace Capa_Presentacion
             {
                 conexion.Consulta_Cualquiera(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text);
             }
+
+            //Aqui se actuliza en arbol
             treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Clear();
             treeViewSGDB.Nodes[0].Nodes[0].Nodes[1].Nodes.Clear();
             treeViewSGDB.Nodes[0].Nodes[0].Nodes[2].Nodes.Clear();
+            comboBasesDatosEliminar.Items.Clear();
+            comboDBConsulta.Items.Clear();
+
             Llenar_Arbol();
         }
 
@@ -465,5 +471,19 @@ namespace Capa_Presentacion
             txtConsulta.Visible = true;
         }
 
+        private void contextMenuStripDBroger_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void actulizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

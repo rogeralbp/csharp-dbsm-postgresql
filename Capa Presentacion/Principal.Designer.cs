@@ -29,20 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Bases de Datos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Login/Group Roles");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Bases de Datos");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Login/Group Roles");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("TableSpaces");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
+            treeNode46,
+            treeNode47,
+            treeNode48});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
+            treeNode49});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
-            this.contextMenuStripDBroger = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.crearDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.elemDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelNombreDB = new System.Windows.Forms.Label();
             this.btnEjecutarConsulta = new System.Windows.Forms.Button();
             this.dtgResultadoConsulta = new System.Windows.Forms.DataGridView();
@@ -104,53 +101,34 @@
             this.actualizarVistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionVistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsulta = new System.Windows.Forms.RichTextBox();
-            this.contextMenuStripDBroger.SuspendLayout();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.crearToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.actulizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propiedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeViewSGDB
             // 
-            this.treeViewSGDB.ContextMenuStrip = this.contextMenuStripDBroger;
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 27);
             this.treeViewSGDB.Name = "treeViewSGDB";
-            treeNode1.Name = "NodoBasesDeDatos";
-            treeNode1.Text = "Bases de Datos";
-            treeNode2.Name = "NodoLogin";
-            treeNode2.Text = "Login/Group Roles";
-            treeNode3.Name = "NodoTableSpaces";
-            treeNode3.Text = "TableSpaces";
-            treeNode4.Name = "NodoNombreServidor";
-            treeNode4.Text = "Servidor SGDB";
-            treeNode5.Name = "NodoServidor";
-            treeNode5.Text = "Servidores";
+            treeNode46.Name = "NodoBasesDeDatos";
+            treeNode46.Text = "Bases de Datos";
+            treeNode47.Name = "NodoLogin";
+            treeNode47.Text = "Login/Group Roles";
+            treeNode48.Name = "NodoTableSpaces";
+            treeNode48.Text = "TableSpaces";
+            treeNode49.Name = "NodoNombreServidor";
+            treeNode49.Text = "Servidor SGDB";
+            treeNode50.Name = "NodoServidor";
+            treeNode50.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode50});
             this.treeViewSGDB.Size = new System.Drawing.Size(248, 514);
             this.treeViewSGDB.TabIndex = 0;
-            // 
-            // contextMenuStripDBroger
-            // 
-            this.contextMenuStripDBroger.Enabled = false;
-            this.contextMenuStripDBroger.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearDBToolStripMenuItem,
-            this.elemDBToolStripMenuItem});
-            this.contextMenuStripDBroger.Name = "contextMenuStripDB";
-            this.contextMenuStripDBroger.Size = new System.Drawing.Size(119, 48);
-            // 
-            // crearDBToolStripMenuItem
-            // 
-            this.crearDBToolStripMenuItem.Enabled = false;
-            this.crearDBToolStripMenuItem.Name = "crearDBToolStripMenuItem";
-            this.crearDBToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.crearDBToolStripMenuItem.Text = "crear DB";
-            // 
-            // elemDBToolStripMenuItem
-            // 
-            this.elemDBToolStripMenuItem.Enabled = false;
-            this.elemDBToolStripMenuItem.Name = "elemDBToolStripMenuItem";
-            this.elemDBToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.elemDBToolStripMenuItem.Text = "elem DB";
             // 
             // labelNombreDB
             // 
@@ -629,12 +607,49 @@
             this.txtConsulta.Visible = false;
             this.txtConsulta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConsulta_KeyPress);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearToolStripMenuItem1,
+            this.actulizarToolStripMenuItem,
+            this.eliminarToolStripMenuItem,
+            this.propiedadesToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 114);
+            // 
+            // crearToolStripMenuItem1
+            // 
+            this.crearToolStripMenuItem1.Name = "crearToolStripMenuItem1";
+            this.crearToolStripMenuItem1.Size = new System.Drawing.Size(102, 22);
+            this.crearToolStripMenuItem1.Text = "Crear";
+            // 
+            // actulizarToolStripMenuItem
+            // 
+            this.actulizarToolStripMenuItem.Name = "actulizarToolStripMenuItem";
+            this.actulizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.actulizarToolStripMenuItem.Text = "Actualizar";
+            this.actulizarToolStripMenuItem.Click += new System.EventHandler(this.actulizarToolStripMenuItem_Click);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
+            // propiedadesToolStripMenuItem
+            // 
+            this.propiedadesToolStripMenuItem.Name = "propiedadesToolStripMenuItem";
+            this.propiedadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.propiedadesToolStripMenuItem.Text = "Propiedades";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1252, 542);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.dtgResultadoConsulta);
             this.Controls.Add(this.btnEjecutarConsulta);
@@ -647,10 +662,10 @@
             this.Name = "Principal";
             this.Text = "pgAdmin";
             this.Load += new System.EventHandler(this.Principal_Load);
-            this.contextMenuStripDBroger.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -662,9 +677,6 @@
         private System.Windows.Forms.Label labelNombreDB;
         private System.Windows.Forms.Button btnEjecutarConsulta;
         private System.Windows.Forms.DataGridView dtgResultadoConsulta;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripDBroger;
-        private System.Windows.Forms.ToolStripMenuItem crearDBToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem elemDBToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem basesDeDatosToolStripMenuItem;
@@ -723,6 +735,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripComboBox comboDBConsulta;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem actulizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem propiedadesToolStripMenuItem;
     }
 }
 
