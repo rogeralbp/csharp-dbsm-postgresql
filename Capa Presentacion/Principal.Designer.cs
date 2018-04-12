@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Bases de Datos");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Login/Group Roles");
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
-            treeNode51,
-            treeNode52,
-            treeNode53});
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
-            treeNode54});
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Bases de Datos");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Login/Group Roles");
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("TableSpaces");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
+            treeNode41,
+            treeNode42,
+            treeNode43});
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
+            treeNode44});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.labelNombreDB = new System.Windows.Forms.Label();
@@ -115,18 +115,18 @@
             // 
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 27);
             this.treeViewSGDB.Name = "treeViewSGDB";
-            treeNode51.Name = "NodoBasesDeDatos";
-            treeNode51.Text = "Bases de Datos";
-            treeNode52.Name = "NodoLogin";
-            treeNode52.Text = "Login/Group Roles";
-            treeNode53.Name = "NodoTableSpaces";
-            treeNode53.Text = "TableSpaces";
-            treeNode54.Name = "NodoNombreServidor";
-            treeNode54.Text = "Servidor SGDB";
-            treeNode55.Name = "NodoServidor";
-            treeNode55.Text = "Servidores";
+            treeNode41.Name = "NodoBasesDeDatos";
+            treeNode41.Text = "Bases de Datos";
+            treeNode42.Name = "NodoLogin";
+            treeNode42.Text = "Login/Group Roles";
+            treeNode43.Name = "NodoTableSpaces";
+            treeNode43.Text = "TableSpaces";
+            treeNode44.Name = "NodoNombreServidor";
+            treeNode44.Text = "Servidor SGDB";
+            treeNode45.Name = "NodoServidor";
+            treeNode45.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode55});
+            treeNode45});
             this.treeViewSGDB.Size = new System.Drawing.Size(248, 514);
             this.treeViewSGDB.TabIndex = 0;
             // 
@@ -234,6 +234,7 @@
             this.basesDeDatosToolStripMenuItem.Name = "basesDeDatosToolStripMenuItem";
             this.basesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.basesDeDatosToolStripMenuItem.Text = "Roles y Usuarios";
+            this.basesDeDatosToolStripMenuItem.Click += new System.EventHandler(this.basesDeDatosToolStripMenuItem_Click);
             // 
             // creacionUsuarioToolStripMenuItem
             // 
@@ -296,6 +297,7 @@
             this.columnasToolStripMenuItem.Name = "columnasToolStripMenuItem";
             this.columnasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.columnasToolStripMenuItem.Text = "Esquemas";
+            this.columnasToolStripMenuItem.Click += new System.EventHandler(this.columnasToolStripMenuItem_Click);
             // 
             // crearEsquemaToolStripMenuItem
             // 
@@ -332,6 +334,7 @@
             this.funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
             this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.funcionesToolStripMenuItem.Text = "Funciones";
+            this.funcionesToolStripMenuItem.Click += new System.EventHandler(this.funcionesToolStripMenuItem_Click);
             // 
             // crearFuncionToolStripMenuItem
             // 
@@ -367,6 +370,7 @@
             this.secuenciasToolStripMenuItem.Name = "secuenciasToolStripMenuItem";
             this.secuenciasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.secuenciasToolStripMenuItem.Text = "Secuencias";
+            this.secuenciasToolStripMenuItem.Click += new System.EventHandler(this.secuenciasToolStripMenuItem_Click);
             // 
             // crearSecuenciasToolStripMenuItem
             // 
@@ -397,6 +401,7 @@
             this.tablasToolStripMenuItem1.Name = "tablasToolStripMenuItem1";
             this.tablasToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
             this.tablasToolStripMenuItem1.Text = "Tablas";
+            this.tablasToolStripMenuItem1.Click += new System.EventHandler(this.tablasToolStripMenuItem1_Click);
             // 
             // crearTablaToolStripMenuItem
             // 
@@ -433,6 +438,7 @@
             this.columnasToolStripMenuItem1.Name = "columnasToolStripMenuItem1";
             this.columnasToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
             this.columnasToolStripMenuItem1.Text = "Columnas";
+            this.columnasToolStripMenuItem1.Click += new System.EventHandler(this.columnasToolStripMenuItem1_Click);
             // 
             // crearColumnaToolStripMenuItem
             // 
@@ -469,6 +475,7 @@
             this.restriccionesToolStripMenuItem.Name = "restriccionesToolStripMenuItem";
             this.restriccionesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.restriccionesToolStripMenuItem.Text = "Restricciones";
+            this.restriccionesToolStripMenuItem.Click += new System.EventHandler(this.restriccionesToolStripMenuItem_Click);
             // 
             // crearRestriccionToolStripMenuItem
             // 
@@ -535,6 +542,7 @@
             this.disparadoresToolStripMenuItem.Name = "disparadoresToolStripMenuItem";
             this.disparadoresToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.disparadoresToolStripMenuItem.Text = "Disparadores";
+            this.disparadoresToolStripMenuItem.Click += new System.EventHandler(this.disparadoresToolStripMenuItem_Click);
             // 
             // crearDisparadorToolStripMenuItem
             // 
@@ -571,6 +579,7 @@
             this.vistasToolStripMenuItem.Name = "vistasToolStripMenuItem";
             this.vistasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.vistasToolStripMenuItem.Text = "Vistas";
+            this.vistasToolStripMenuItem.Click += new System.EventHandler(this.vistasToolStripMenuItem_Click);
             // 
             // crearVistaToolStripMenuItem
             // 
@@ -615,20 +624,20 @@
             this.eliminarToolStripMenuItem,
             this.propiedadesToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(140, 92);
             // 
             // crearToolStripMenuItem1
             // 
             this.crearToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("crearToolStripMenuItem1.Image")));
             this.crearToolStripMenuItem1.Name = "crearToolStripMenuItem1";
-            this.crearToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.crearToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
             this.crearToolStripMenuItem1.Text = "Crear";
             // 
             // actulizarToolStripMenuItem
             // 
             this.actulizarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("actulizarToolStripMenuItem.Image")));
             this.actulizarToolStripMenuItem.Name = "actulizarToolStripMenuItem";
-            this.actulizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.actulizarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.actulizarToolStripMenuItem.Text = "Actualizar";
             this.actulizarToolStripMenuItem.Click += new System.EventHandler(this.actulizarToolStripMenuItem_Click);
             // 
@@ -636,7 +645,7 @@
             // 
             this.eliminarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarToolStripMenuItem.Image")));
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -644,7 +653,7 @@
             // 
             this.propiedadesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("propiedadesToolStripMenuItem.Image")));
             this.propiedadesToolStripMenuItem.Name = "propiedadesToolStripMenuItem";
-            this.propiedadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.propiedadesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.propiedadesToolStripMenuItem.Text = "Propiedades";
             // 
             // Principal

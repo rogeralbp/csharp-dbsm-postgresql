@@ -443,7 +443,8 @@ namespace Capa_Presentacion
 
         private void indecesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CRUD_Indeces v = new CRUD_Indeces();
+            v.Show();
         }
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -484,6 +485,60 @@ namespace Capa_Presentacion
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void basesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Usuarios v = new CRUD_Usuarios();
+            v.Show();
+        }
+
+        private void columnasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Esqeumas v = new CRUD_Esqeumas();
+            v.Show();
+        }
+
+        private void funcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Funciones v = new CRUD_Funciones();
+            v.Show();
+        }
+
+        private void secuenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Secuencias  v = new CRUD_Secuencias();
+            v.Show();
+        }
+
+        private void tablasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CRUD_Tablas v = new CRUD_Tablas();
+            v.Show();
+        }
+
+        private void columnasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CRUD_Columnas v = new CRUD_Columnas();
+            v.Show();
+        }
+
+        private void restriccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Restricciones v = new CRUD_Restricciones();
+            v.Show();
+        }
+
+        private void disparadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Triggers v = new CRUD_Triggers();
+            v.Show();
+        }
+
+        private void vistasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUD_Vistas v = new CRUD_Vistas();
+            v.Show();
         }
     }
 }
