@@ -13,6 +13,7 @@ namespace Capa_Datos
     {
         public static NpgsqlConnection conexion;
         public static NpgsqlCommand cmd;
+        string resultado_Query = string.Empty;
 
         public static void Conexion_General()
         {
@@ -351,13 +352,23 @@ namespace Capa_Datos
                 if (realizacionConsulta)
                 {
                     MessageBox.Show("Consulta Ejecutada Con Exito!!");
+                    resultado_Query= "Consulta Ejecutada Con Exito!!";
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un Error en la ejecucion de la Consulta");
+                    MessageBox.Show("Ha ocurrido un Error en la ejecucion de la Consulta", "¡¡ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    resultado_Query="Ha ocurrido un Error en la ejecucion de la Consulta";
                 }
             }
-            catch (Exception errorQuery) { MessageBox.Show("Error se origina como _\n"+errorQuery); }
+            catch (Exception errorQuery)
+            {
+                MessageBox.Show("Error se origina como :\n"+errorQuery);
+            }
+        }
+
+        public string Mensaje_Query() {
+
+            return resultado_Query;
         }
 
     }

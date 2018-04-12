@@ -166,7 +166,7 @@
             this.btnEjecutarConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnEjecutarConsulta.Image")));
             this.btnEjecutarConsulta.Location = new System.Drawing.Point(598, 0);
             this.btnEjecutarConsulta.Name = "btnEjecutarConsulta";
-            this.btnEjecutarConsulta.Size = new System.Drawing.Size(87, 35);
+            this.btnEjecutarConsulta.Size = new System.Drawing.Size(84, 35);
             this.btnEjecutarConsulta.TabIndex = 3;
             this.btnEjecutarConsulta.UseVisualStyleBackColor = true;
             this.btnEjecutarConsulta.Visible = false;
