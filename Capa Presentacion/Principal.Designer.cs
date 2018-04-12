@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Bases de Datos");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Login/Group Roles");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
-            treeNode41,
-            treeNode42,
-            treeNode43});
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
-            treeNode44});
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Bases de Datos");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Login/Group Roles");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("TableSpaces");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
+            treeNode46,
+            treeNode47,
+            treeNode48});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
+            treeNode49});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.labelNombreDB = new System.Windows.Forms.Label();
@@ -115,18 +115,18 @@
             // 
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 27);
             this.treeViewSGDB.Name = "treeViewSGDB";
-            treeNode41.Name = "NodoBasesDeDatos";
-            treeNode41.Text = "Bases de Datos";
-            treeNode42.Name = "NodoLogin";
-            treeNode42.Text = "Login/Group Roles";
-            treeNode43.Name = "NodoTableSpaces";
-            treeNode43.Text = "TableSpaces";
-            treeNode44.Name = "NodoNombreServidor";
-            treeNode44.Text = "Servidor SGDB";
-            treeNode45.Name = "NodoServidor";
-            treeNode45.Text = "Servidores";
+            treeNode46.Name = "NodoBasesDeDatos";
+            treeNode46.Text = "Bases de Datos";
+            treeNode47.Name = "NodoLogin";
+            treeNode47.Text = "Login/Group Roles";
+            treeNode48.Name = "NodoTableSpaces";
+            treeNode48.Text = "TableSpaces";
+            treeNode49.Name = "NodoNombreServidor";
+            treeNode49.Text = "Servidor SGDB";
+            treeNode50.Name = "NodoServidor";
+            treeNode50.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode45});
+            treeNode50});
             this.treeViewSGDB.Size = new System.Drawing.Size(248, 514);
             this.treeViewSGDB.TabIndex = 0;
             // 
@@ -285,6 +285,7 @@
             this.comboBasesDatosEliminar.Name = "comboBasesDatosEliminar";
             this.comboBasesDatosEliminar.Size = new System.Drawing.Size(121, 23);
             this.comboBasesDatosEliminar.SelectedIndexChanged += new System.EventHandler(this.comboBasesDatosEliminar_SelectedIndexChanged);
+            this.comboBasesDatosEliminar.Click += new System.EventHandler(this.comboBasesDatosEliminar_Click);
             // 
             // columnasToolStripMenuItem
             // 

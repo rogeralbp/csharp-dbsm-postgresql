@@ -540,5 +540,10 @@ namespace Capa_Presentacion
             CRUD_Vistas v = new CRUD_Vistas();
             v.Show();
         }
+
+        private void comboBasesDatosEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

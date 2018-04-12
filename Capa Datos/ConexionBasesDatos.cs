@@ -317,9 +317,28 @@ namespace Capa_Datos
             try
             {
                 Conexion_General();
-                conexion.Open();
+                try
+                {
+                    conexion.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error--- \n" + error);
+                }
+
                 cmd = new NpgsqlCommand("DROP DATABASE " + nombreDB + "", conexion);
-                cmd.ExecuteNonQuery();
+                bool realizacionConsulta = Convert.ToBoolean(cmd.ExecuteNonQuery());
+
+                if (realizacionConsulta)
+                {
+                    MessageBox.Show("Se Elimino la DB con Exito!!");
+                    resultado_Query = "Consulta Ejecutada Con Exito!!";
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un Error en la ejecucion de la Eliminacion", "¡¡ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    resultado_Query = "Ha ocurrido un Error en la ejecucion de la Consulta";
+                }
                 conexion.Close();
             }
             catch (Exception error)
