@@ -48,7 +48,7 @@ namespace Capa_Datos
             string claveAnthonny = "1414250816ma";
             string claveBryan = "bryan2748245";
             string claveRoger = "Saborio17";
-            //string baseDatos = "gesion_vuelos";
+ 
             string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + claveRoger + ";" + "Database=" + db;
             conexion = new NpgsqlConnection(cadenaConexion);
             if (conexion != null)

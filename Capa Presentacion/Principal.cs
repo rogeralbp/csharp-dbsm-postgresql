@@ -294,7 +294,7 @@ namespace Capa_Presentacion
                 conexion.Consulta_Cualquiera(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text);
             }
 
-            //Aqui se actuliza en arbol
+            //Aqui se actualiza en arbol
             treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Clear();
             treeViewSGDB.Nodes[0].Nodes[0].Nodes[1].Nodes.Clear();
             treeViewSGDB.Nodes[0].Nodes[0].Nodes[2].Nodes.Clear();
@@ -400,9 +400,9 @@ namespace Capa_Presentacion
         
         private void crearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show("Debde de poder crearse las db");
+            // MessageBox.Show("Debe de poder crearse las db");
             DialogResult opcion;
-            opcion = MessageBox.Show("Desea Crear una Base de Datos ?", "Confirmacion Eliminacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            opcion = MessageBox.Show("Desea Crear una Base de Datos ?", "Confirmacion Creacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (opcion == DialogResult.OK)
             {
                 string nombreBaseDatos = Microsoft.VisualBasic.Interaction.InputBox("Introduzca el Nombre de la Base de Datos", "Nombre Base de Datos", "1", 500, 250);             
@@ -415,6 +415,12 @@ namespace Capa_Presentacion
                     comboBasesDatosEliminar.Items.Add(informacionDB[i]);
                 }
             }
+
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Clear();
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[1].Nodes.Clear();
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[2].Nodes.Clear();
+            comboBasesDatosEliminar.Items.Clear();
+            comboDBConsulta.Items.Clear();
         }
 
         private void comboBasesDatosEliminar_SelectedIndexChanged(object sender, EventArgs e)
@@ -434,6 +440,12 @@ namespace Capa_Presentacion
                     comboBasesDatosEliminar.Items.Add(informacionDB[i]);
                 }
             }
+
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Clear();
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[1].Nodes.Clear();
+            treeViewSGDB.Nodes[0].Nodes[0].Nodes[2].Nodes.Clear();
+            comboBasesDatosEliminar.Items.Clear();
+            comboDBConsulta.Items.Clear();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

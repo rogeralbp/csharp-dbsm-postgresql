@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Bases de Datos");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Login/Group Roles");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("TableSpaces");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
-            treeNode46,
-            treeNode47,
-            treeNode48});
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
-            treeNode49});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Bases de Datos");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Login/Group Roles");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TableSpaces");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Servidor SGDB", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Servidores", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.treeViewSGDB = new System.Windows.Forms.TreeView();
             this.labelNombreDB = new System.Windows.Forms.Label();
@@ -115,18 +115,18 @@
             // 
             this.treeViewSGDB.Location = new System.Drawing.Point(2, 27);
             this.treeViewSGDB.Name = "treeViewSGDB";
-            treeNode46.Name = "NodoBasesDeDatos";
-            treeNode46.Text = "Bases de Datos";
-            treeNode47.Name = "NodoLogin";
-            treeNode47.Text = "Login/Group Roles";
-            treeNode48.Name = "NodoTableSpaces";
-            treeNode48.Text = "TableSpaces";
-            treeNode49.Name = "NodoNombreServidor";
-            treeNode49.Text = "Servidor SGDB";
-            treeNode50.Name = "NodoServidor";
-            treeNode50.Text = "Servidores";
+            treeNode1.Name = "NodoBasesDeDatos";
+            treeNode1.Text = "Bases de Datos";
+            treeNode2.Name = "NodoLogin";
+            treeNode2.Text = "Login/Group Roles";
+            treeNode3.Name = "NodoTableSpaces";
+            treeNode3.Text = "TableSpaces";
+            treeNode4.Name = "NodoNombreServidor";
+            treeNode4.Text = "Servidor SGDB";
+            treeNode5.Name = "NodoServidor";
+            treeNode5.Text = "Servidores";
             this.treeViewSGDB.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode50});
+            treeNode5});
             this.treeViewSGDB.Size = new System.Drawing.Size(248, 514);
             this.treeViewSGDB.TabIndex = 0;
             // 
