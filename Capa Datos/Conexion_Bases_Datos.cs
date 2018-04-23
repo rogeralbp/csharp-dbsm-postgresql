@@ -423,7 +423,7 @@ namespace Capa_Datos
             }
             catch (Exception errorQuery)
             {
-                MessageBox.Show("Error se origina como :\n" + errorQuery);
+                MessageBox.Show("Error se origina como:\n" + errorQuery);
             }
         }
 
