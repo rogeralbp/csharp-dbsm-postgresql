@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using Npgsql;
 
 namespace Capa_Datos
 {
-    public class ConexionBasesDatos
+    public class Conexion_Bases_Datos
     {
         public static NpgsqlConnection conexion;
         public static NpgsqlCommand cmd;
@@ -340,6 +341,7 @@ namespace Capa_Datos
                     resultado_Query = "Ha ocurrido un Error en la ejecucion de la Consulta";
                 }
                 conexion.Close();
+
             }
             catch (Exception error)
             {
@@ -385,9 +387,44 @@ namespace Capa_Datos
             }
         }
 
-        public string Mensaje_Query() {
+    
+        public void Consulta_Query(string db, string scripts,DataGridView dtg)
+        {
+            try
+            {
+                Conexion_Tablas(db);
+                try
+                {
+                    conexion.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error--- \n" + error);
+                }
+                cmd = new NpgsqlCommand(scripts, conexion);
+                DataSet dataset = new DataSet();
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(scripts, conexion);
+                adapter.Fill(dataset);
+                dtg.DataSource = dataset.Tables[0];
+                
+                bool realizacionConsulta = Convert.ToBoolean(cmd.ExecuteNonQuery());
 
-            return resultado_Query;
+                if (realizacionConsulta)
+                {
+                    MessageBox.Show("Query Ejecutada Con Exito!!");
+                    resultado_Query = "Consulta Ejecutada Con Exito!!";
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un Error en la ejecucion del Query", "¡¡ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    resultado_Query = "Ha ocurrido un Error en la ejecucion de la Consulta";
+                }
+                conexion.Close();
+            }
+            catch (Exception errorQuery)
+            {
+                MessageBox.Show("Error se origina como :\n" + errorQuery);
+            }
         }
 
     }

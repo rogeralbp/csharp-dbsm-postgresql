@@ -14,7 +14,7 @@ namespace Capa_Presentacion
 {
     public partial class Principal : Form
     {
-        ConexionBasesDatos conexion = new ConexionBasesDatos();
+        Conexion_Bases_Datos conexion = new Conexion_Bases_Datos();
         string dbConsulta = string.Empty;
         string dbNombre = string.Empty;
         string[] Reservadas = new string[] { "ADD","EXTERNAL",
@@ -255,36 +255,43 @@ namespace Capa_Presentacion
         public Principal()
         {
             InitializeComponent();
-            this.txtConsulta.TextChanged += (ob, ev) =>
+            try
             {
-                var palabras = this.txtConsulta.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                var resultado = from b in Reservadas
-                                from c in palabras
-                                where c == b
-                                select b;
-
-                int inicio = 0;
-                foreach (var item in resultado)
+                this.txtConsulta.TextChanged += (ob, ev) =>
                 {
-                    inicio = this.txtConsulta.Text.IndexOf(item, inicio);
-                    this.txtConsulta.Select(inicio, item.Length);
-                    this.txtConsulta.SelectionColor = Color.Red;
+                    var palabras = this.txtConsulta.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    var resultado = from b in Reservadas
+                                    from c in palabras
+                                    where c == b
+                                    select b;
+
+                    
+                    foreach (var item in resultado)
+                    {
+                        int inicio = 0;
+                        inicio = this.txtConsulta.Text.IndexOf(item, inicio);
+                        this.txtConsulta.Select(inicio, item.Length);
+                        this.txtConsulta.SelectionColor = Color.Red;
+                        this.txtConsulta.SelectionStart = this.txtConsulta.Text.Length;
+                        inicio++;
+                    }
+
+                    this.txtConsulta.SelectionColor = Color.Black;
                     this.txtConsulta.SelectionStart = this.txtConsulta.Text.Length;
-                    inicio++;
-                }
-
-                this.txtConsulta.SelectionColor = Color.Black;
-                this.txtConsulta.SelectionStart = this.txtConsulta.Text.Length;
 
 
-            };
+                };
+            }
+            catch (Exception e) { MessageBox.Show("Error como \n"+e); }
 
             this.CenterToScreen();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //tabControlConsultas.TabPages[0].Text = "Consulta " + dbConsulta;
+            string[] arreglo = txtConsulta.Text.Split();
             if (comboDBConsulta.SelectedItem== null)
             {
                 conexion.Consulta_Cualquiera("postgres", txtConsulta.Text);
@@ -292,6 +299,12 @@ namespace Capa_Presentacion
             else
             {
                 conexion.Consulta_Cualquiera(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text);
+                if (arreglo[0]=="SELECT"|| arreglo[0] == "select") {
+
+                    //MessageBox.Show("Es una Consulta");
+                    conexion.Consulta_Query(comboDBConsulta.SelectedItem.ToString(), txtConsulta.Text,dtgResultadoConsulta);
+                    dtgResultadoConsulta.Visible = true;
+                }
             }
 
             //Aqui se actualiza en arbol
@@ -311,7 +324,7 @@ namespace Capa_Presentacion
 
         public void Llenar_Arbol()
         {
-            ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
+            ArrayList informacionDB = Conexion_Bases_Datos.ConsultarInformacionDBSistema();
             for (int i = 0; i < informacionDB.Count; i++)
             {
                 treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes.Add(informacionDB[i].ToString());
@@ -321,14 +334,14 @@ namespace Capa_Presentacion
             }
 
             //Users
-            ArrayList informacionUsers = ConexionBasesDatos.ConsultarInformacionUsersSistema();
+            ArrayList informacionUsers = Conexion_Bases_Datos.ConsultarInformacionUsersSistema();
             for (int i = 0; i < informacionUsers.Count; i++)
             {
                 treeViewSGDB.Nodes[0].Nodes[0].Nodes[1].Nodes.Add(informacionUsers[i].ToString());
             }
 
             //TableSpace
-            ArrayList informacionTS = ConexionBasesDatos.ConsultarInformacionTableSpaceSistema();
+            ArrayList informacionTS = Conexion_Bases_Datos.ConsultarInformacionTableSpaceSistema();
             for (int i = 0; i < informacionTS.Count; i++)
             {
                 treeViewSGDB.Nodes[0].Nodes[0].Nodes[2].Nodes.Add(informacionTS[i].ToString());
@@ -338,7 +351,7 @@ namespace Capa_Presentacion
             for (int i = 0; i < informacionDB.Count; i++)
             {
                 treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes.Add("Schemas");
-                ArrayList informacionSchemas = ConexionBasesDatos.ConsultarInformacionSchemas(informacionDB[i].ToString());
+                ArrayList informacionSchemas = Conexion_Bases_Datos.ConsultarInformacionSchemas(informacionDB[i].ToString());
                 for (int j = 0; j < informacionSchemas.Count; j++)
                 {
                     treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes.Add(informacionSchemas[j].ToString());
@@ -349,32 +362,32 @@ namespace Capa_Presentacion
                     treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes.Add("Views");
 
                     //Functions
-                    ArrayList informacionFunciones = ConexionBasesDatos.ConsultarInformacionFuctions(informacionDB[i].ToString(), informacionSchemas[j].ToString());
+                    ArrayList informacionFunciones = Conexion_Bases_Datos.ConsultarInformacionFuctions(informacionDB[i].ToString(), informacionSchemas[j].ToString());
                     for (int y = 0; y < informacionFunciones.Count; y++)
                     {
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[0].Nodes.Add(informacionFunciones[y].ToString());
                     }
 
                     //Sequences
-                    ArrayList informacionSequences = ConexionBasesDatos.ConsultarInformacionSequences(informacionDB[i].ToString(), informacionSchemas[j].ToString());
+                    ArrayList informacionSequences = Conexion_Bases_Datos.ConsultarInformacionSequences(informacionDB[i].ToString(), informacionSchemas[j].ToString());
                     for (int y = 0; y < informacionSequences.Count; y++)
                     {
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[1].Nodes.Add(informacionSequences[y].ToString());
                     }
 
                     //Tables
-                    ArrayList informacionTables = ConexionBasesDatos.ConsultarInformacionTablasDB(informacionDB[i].ToString(), informacionSchemas[j].ToString());
+                    ArrayList informacionTables = Conexion_Bases_Datos.ConsultarInformacionTablasDB(informacionDB[i].ToString(), informacionSchemas[j].ToString());
                     for (int y = 0; y < informacionTables.Count; y++)
                     {
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes.Add(informacionTables[y].ToString());
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes.Add("Columns");
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes.Add("Indexes");
-                        ArrayList informacionColumns = ConexionBasesDatos.ConsultarInformacionColumns(informacionDB[i].ToString(), informacionSchemas[j].ToString(), informacionTables[y].ToString());
+                        ArrayList informacionColumns = Conexion_Bases_Datos.ConsultarInformacionColumns(informacionDB[i].ToString(), informacionSchemas[j].ToString(), informacionTables[y].ToString());
                         for (int x = 0; x < informacionColumns.Count; x++)
                         {
                             treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes[0].Nodes.Add(informacionColumns[x].ToString());
                         }
-                        ArrayList informacionIndex = ConexionBasesDatos.ConsultarInformacionIndex(informacionDB[i].ToString(), informacionSchemas[j].ToString(), informacionTables[y].ToString());
+                        ArrayList informacionIndex = Conexion_Bases_Datos.ConsultarInformacionIndex(informacionDB[i].ToString(), informacionSchemas[j].ToString(), informacionTables[y].ToString());
                         for (int x = 0; x < informacionIndex.Count; x++)
                         {
                             treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[2].Nodes[y].Nodes[1].Nodes.Add(informacionIndex[x].ToString());
@@ -382,14 +395,14 @@ namespace Capa_Presentacion
                     }
 
                     //Triggers
-                    ArrayList informacionTrigger = ConexionBasesDatos.ConsultarInformacionTrigger(informacionDB[i].ToString(), informacionSchemas[j].ToString());
+                    ArrayList informacionTrigger = Conexion_Bases_Datos.ConsultarInformacionTrigger(informacionDB[i].ToString(), informacionSchemas[j].ToString());
                     for (int y = 0; y < informacionTrigger.Count; y++)
                     {
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[3].Nodes.Add(informacionTrigger[y].ToString());
                     }
 
                     //Views
-                    ArrayList informacionViews = ConexionBasesDatos.ConsultarInformacionViews(informacionDB[i].ToString(), informacionSchemas[j].ToString());
+                    ArrayList informacionViews = Conexion_Bases_Datos.ConsultarInformacionViews(informacionDB[i].ToString(), informacionSchemas[j].ToString());
                     for (int y = 0; y < informacionViews.Count; y++)
                     {
                         treeViewSGDB.Nodes[0].Nodes[0].Nodes[0].Nodes[i].Nodes[0].Nodes[j].Nodes[4].Nodes.Add(informacionViews[y].ToString());
@@ -409,7 +422,7 @@ namespace Capa_Presentacion
                 conexion.Crear_Base_Datos(nombreBaseDatos);
                 MessageBox.Show("Se Creo con exito la Base de Datos", "Confirmacion Creacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 comboBasesDatosEliminar.Items.Clear();
-                ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
+                ArrayList informacionDB = Conexion_Bases_Datos.ConsultarInformacionDBSistema();
                 for (int i = 0; i < informacionDB.Count; i++)
                 {
                     comboBasesDatosEliminar.Items.Add(informacionDB[i]);
@@ -425,16 +438,17 @@ namespace Capa_Presentacion
 
         private void comboBasesDatosEliminar_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             DialogResult opcion;
             opcion = MessageBox.Show("Desea Eliminar la Base de Datos "+comboBasesDatosEliminar.SelectedItem.ToString()+" ?", "Confirmacion Eliminacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (opcion == DialogResult.OK)
             {
                 string nombreBaseDatos = comboBasesDatosEliminar.SelectedItem.ToString();
                 conexion.Eliminar_Base_Datos(nombreBaseDatos);
-                MessageBox.Show("Se Elimino con exito la Base de Datos", "Confirmacion Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Se Elimino con exito la Base de Datos", "Confirmacion Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 comboBasesDatosEliminar.Items.Clear();
-                ArrayList informacionDB = ConexionBasesDatos.ConsultarInformacionDBSistema();
+                ArrayList informacionDB = Conexion_Bases_Datos.ConsultarInformacionDBSistema();
                 for (int i = 0; i < informacionDB.Count; i++)
                 {
                     comboBasesDatosEliminar.Items.Add(informacionDB[i]);
@@ -477,6 +491,7 @@ namespace Capa_Presentacion
         private void comboDBConsulta_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtConsulta.Visible = true;
+            labelNombreDB2.Text = comboDBConsulta.SelectedItem.ToString() + " Conectada!!";
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

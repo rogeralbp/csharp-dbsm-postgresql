@@ -106,6 +106,8 @@
             this.actulizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propiedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelNombreBD = new System.Windows.Forms.Label();
+            this.labelNombreDB2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -153,10 +155,10 @@
             // dtgResultadoConsulta
             // 
             this.dtgResultadoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgResultadoConsulta.Location = new System.Drawing.Point(252, 366);
+            this.dtgResultadoConsulta.Location = new System.Drawing.Point(252, 379);
             this.dtgResultadoConsulta.Name = "dtgResultadoConsulta";
             this.dtgResultadoConsulta.ReadOnly = true;
-            this.dtgResultadoConsulta.Size = new System.Drawing.Size(988, 175);
+            this.dtgResultadoConsulta.Size = new System.Drawing.Size(988, 162);
             this.dtgResultadoConsulta.TabIndex = 4;
             this.dtgResultadoConsulta.Visible = false;
             // 
@@ -657,6 +659,22 @@
             this.propiedadesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.propiedadesToolStripMenuItem.Text = "Propiedades";
             // 
+            // labelNombreBD
+            // 
+            this.labelNombreBD.AutoSize = true;
+            this.labelNombreBD.Location = new System.Drawing.Point(327, 10);
+            this.labelNombreBD.Name = "labelNombreBD";
+            this.labelNombreBD.Size = new System.Drawing.Size(0, 13);
+            this.labelNombreBD.TabIndex = 6;
+            // 
+            // labelNombreDB2
+            // 
+            this.labelNombreDB2.AutoSize = true;
+            this.labelNombreDB2.Location = new System.Drawing.Point(259, 363);
+            this.labelNombreDB2.Name = "labelNombreDB2";
+            this.labelNombreDB2.Size = new System.Drawing.Size(0, 13);
+            this.labelNombreDB2.TabIndex = 7;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -664,6 +682,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1252, 542);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.labelNombreDB2);
+            this.Controls.Add(this.labelNombreBD);
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.dtgResultadoConsulta);
             this.Controls.Add(this.btnEjecutarConsulta);
@@ -754,6 +774,8 @@
         private System.Windows.Forms.ToolStripMenuItem actulizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propiedadesToolStripMenuItem;
+        private System.Windows.Forms.Label labelNombreBD;
+        private System.Windows.Forms.Label labelNombreDB2;
     }
 }
 
