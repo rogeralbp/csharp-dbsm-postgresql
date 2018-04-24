@@ -695,6 +695,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.Text = "pgAdmin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultadoConsulta)).EndInit();
             this.menuStrip1.ResumeLayout(false);
