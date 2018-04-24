@@ -290,7 +290,7 @@ namespace Capa_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //tabControlConsultas.TabPages[0].Text = "Consulta " + dbConsulta;
+  
             string[] arreglo = txtConsulta.Text.Split();
             if (comboDBConsulta.SelectedItem== null)
             {
@@ -495,6 +495,7 @@ namespace Capa_Presentacion
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            labelNombreDB2.Text ="Consulta General.";
             txtConsulta.Visible = true;
         }
 
@@ -581,6 +582,11 @@ namespace Capa_Presentacion
                 Application.Exit();
             }
             //el mae simpre se cierra, algo esta mal.... hay que analizarlo
+        }
+
+        private void txtConsulta_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

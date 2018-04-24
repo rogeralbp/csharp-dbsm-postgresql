@@ -617,6 +617,7 @@
             this.txtConsulta.TabIndex = 0;
             this.txtConsulta.Text = "";
             this.txtConsulta.Visible = false;
+            this.txtConsulta.TextChanged += new System.EventHandler(this.txtConsulta_TextChanged);
             this.txtConsulta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConsulta_KeyPress);
             // 
             // contextMenuStrip1
