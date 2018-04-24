@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 164);
+            this.label1.Location = new System.Drawing.Point(138, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 0;
@@ -48,17 +48,17 @@
             // 
             // txtContraseñaPostgres
             // 
-            this.txtContraseñaPostgres.Location = new System.Drawing.Point(203, 161);
+            this.txtContraseñaPostgres.Location = new System.Drawing.Point(233, 229);
             this.txtContraseñaPostgres.Name = "txtContraseñaPostgres";
             this.txtContraseñaPostgres.PasswordChar = '*';
-            this.txtContraseñaPostgres.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseñaPostgres.Size = new System.Drawing.Size(144, 20);
             this.txtContraseñaPostgres.TabIndex = 1;
             this.txtContraseñaPostgres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaPostgres_KeyPress);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(164, 199);
+            this.button1.Location = new System.Drawing.Point(199, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 2;
@@ -70,9 +70,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(116, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(88, -13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(320, 236);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -81,7 +81,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(423, 279);
+            this.ClientSize = new System.Drawing.Size(478, 330);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtContraseñaPostgres);
