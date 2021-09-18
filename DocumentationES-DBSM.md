@@ -1,14 +1,20 @@
-﻿![](Aspose.Words.bf85c0b8-0e08-46b8-a12e-2e65c5bec10f.001.jpeg)
+﻿![](https://user-images.githubusercontent.com/31899798/133891614-f19c8e67-f6d0-4deb-9f06-fe5211333304.jpeg)
 
-UNIVERSIDAD TÉCNICA NACIONAL  ![](Aspose.Words.bf85c0b8-0e08-46b8-a12e-2e65c5bec10f.002.png)
+![](https://user-images.githubusercontent.com/31899798/133891626-caec29b5-a4b9-4eb4-9d58-31eb08d3eeaa.png)
+
+UNIVERSIDAD TÉCNICA NACIONAL
 
 4 CUATRIMESTRE, 2018. 
 
-CURSO: APLICACION DE BASES DE DATOS  PROFESOR: EFREN JIMENEZ DELGADO 
+CURSO: APLICACION DE BASES DE DATOS  
+PROFESOR: EFREN JIMENEZ DELGADO 
 
 PROYECTO SISTEMA GESTOR DE BASES DE DATOS. 
 
-BRYAN CAMPOS VINDAS ANTHONY CALDERON ESPINOZA ROGER OPORTA PEREZ  
+ESTUDIANTES: 
+- BRYAN CAMPOS VINDAS 
+- ANTHONY CALDERON ESPINOZA 
+- ROGER OPORTA PEREZ  
 
 RESUMEN EJECUTIVO 
 
@@ -39,15 +45,15 @@ Este proyecto conllevo muchas horas de trabajo en las cuales proyectamos que una
 
 1-  Ventana Principal: 
 
-![](Aspose.Words.bf85c0b8-0e08-46b8-a12e-2e65c5bec10f.003.jpeg)
+![](https://user-images.githubusercontent.com/31899798/133891787-cd00b028-6573-44dc-bfae-1ea3964214e7.jpeg)
 
 2- Algunas Opciones: 
 
-![](Aspose.Words.bf85c0b8-0e08-46b8-a12e-2e65c5bec10f.004.jpeg)
+![](https://user-images.githubusercontent.com/31899798/133891798-017996d3-1187-4eca-bc5d-59ce45f438fa.jpeg)
 
 3- Árbol de Objetos: 
 
-![](Aspose.Words.bf85c0b8-0e08-46b8-a12e-2e65c5bec10f.005.png)
+![](https://user-images.githubusercontent.com/31899798/133891807-28b0bbd0-e9f3-46dc-b6f0-497d763d33bd.png)
 
 CONCLUSIONES 
 
